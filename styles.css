@@ -1,22 +1,37 @@
+@font-face {
+	font-family: "Starcatcher";
+	src: url(starcatcher.ttf); 
+	format("truetype");
+}
+
 body {
-	width: 80%;
-	max-width: 800px;
+	width: 90%;
+	max-width: 60rem;
 	margin: 0 auto;
-	padding: 0 2em;
+	padding: 0 2rem;
 	background-color: rgb(255, 205, 41);
-	font-size: 1em;
+	background-image: url("images/diaflow.gif");
+	font-size: 1rem;
+	font-family: sans-serif;
 }
 
 main, footer {
 	background-color: rgb(82, 73, 80);
-	font-size: 1em;
+	font-size: 1rem;
 	margin: 0 auto;
-	padding: 2em;
+	padding: 2rem;
+}
+
+article {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+	align-content: stretch;
 }
 
 footer {
 	text-align: center;
-	padding: .5em 2em;
+	padding: .5rem 2rem;
 }
 
 footer p {
@@ -25,73 +40,183 @@ footer p {
 
 header {
 	background-color: rgb(82, 73, 80);
-	font-size: 1em;
+	font-size: 1rem;
 	margin: 0 auto;
-	padding: .5em 2em;
+	padding: .5rem 2rem;
 	position: -webkit-sticky;
 	position: sticky;
 	top: 0;
 }
 
-h1 {
-	text-align: center;
-	text-transform: uppercase;
-	letter-spacing: .2em;
-	color: plum;
-	font-size: 2.5em;
-	font-weight: 900;
-}
-
-h2, h3 {
-	text-transform: uppercase;
-	letter-spacing: .1em;
-	color: purple;
-	background-color: plum;
-	font-size: 1.5em;
-	font-weight: 700;
-	padding: .5em 1em 0 .5em;
-	margin-top: 0;
-	margin-bottom: -.5em;
-}
-
-section {
-	background-color: bisque;
-	padding: 1em;
+nav {
+	font-family: "Starcatcher", "Arial Bold", sans-serif;
+	font-size: 2rem;
+	padding: 0;
+	margin: 0;
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0;
 }
 
 nav ul {
 	text-align: center;
 	padding: 0;
+	margin: 0;
 }
 
 nav ul li {
 	display: inline-block;
-	margin-right: 2em;
-	font-size: 1em;
+	margin: 0 1rem;
+	
 }
 
-a {
+nav ul li a {
 	color: rgb(201, 137, 201);
 	text-decoration: none;
 	font-weight: 600;
-	margin-top:-150px;
-	padding-top: 150px;
+	margin-top:-200px;
+	padding-top: 400px;
+	padding: .5rem;
+}
+
+nav ul li a:hover {
+	font-weight: 900;
+	background-color: yellow;
+	border-radius: 0;
+	padding: .5rem;
+}
+
+a {
+	text-transform: uppercase;
+	text-decoration: none;
+	font-weight: 700;
+}
+
+/*h1 color flash*/
+@keyframes flash {
+	0%		{color: purple;}
+	100%	{color: rgb(255, 205, 41);}
+}
+
+h1 {
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: 1rem;
+	color: rgb(243, 138, 0);
+	font-size: 5rem;
+	font-weight: 900;
+	font-family: "Starcatcher", "Arial Bold", sans-serif;
+	margin: 0;
+	animation-name: flash;
+    animation-duration: .2s;
+    animation-iteration-count: 10;
+}
+
+h2 {
+	text-transform: uppercase;
+	letter-spacing: .3rem;
+	font-family: "Starcatcher", "Arial Bold", sans-serif;
+	color: rgb(255, 205, 41);
+	background-color: rgb(160, 89, 133);
+	border-radius: 0;
+	font-size: 3rem;
+	font-weight: 700;
+	padding: .5rem;
+	margin: -1rem -1rem -.5rem -1rem;
+}
+
+h3 {
+	background-color: rgb(160, 89, 133);
+	background-image: url("images/horflow2.gif");
+	font-size: .5rem;
+	text-anchor: middle;
+	text-align: right;
+	margin: .5rem -1rem -1rem -1rem;
+	padding: .5rem;
+	position: static;
+	bottom: 0;
+}
+
+section {
+	display: block;
+	max-width: 100%;
+	background-color: rgb(194, 194, 194);
+	border-radius: 0;
+	padding: 1rem;
+	margin-bottom: 2rem;
+	overflow: hidden;
+}
+
+.small {
+	max-width: 40%;
+}
+
+.mini {
+	max-width: 20%;
+	
+}
+
+div {
+	display: flex;
+	flex-flow: col wrap;
+	margin: 0;
+	padding: 0;
+	text-align: left;
+}
+
+div p {
+	width: 30%;
+	text-align: right;
 }
 
 p {
-	padding: 1em;
+	width: auto;
+	padding: .5rem;
+	overflow-wrap: break-word;
 }
 
 figure {
+	display: flex;
+	flex-flow: row wrap;
 	margin: 0;
-	padding: 0 1em;
+	padding: .5rem;
 	text-align: left;
+	overflow: auto;
+}
+
+figure img {
+	height: 200px;
+	width: auto;
+	margin: .5rem;
 }
 
 figcaption {
 	font-style: italic;
+	text-align: center;
 }
 
-img {
-	max-width: 100%;
+header img, footer img {
+	margin: 0;
+}
+
+/*.fade {
+	-webkit-animation: fadein 2s ease-in both;
+	animation: fadein 2s ease-in both;
+	padding: 0 .5rem;
+}
+
+fade in image
+@keyframes fadein {
+	0% 		{ opacity: 0; }
+	100% 	{ opacity: 1; }
+}*/
+
+/* make the navigation stack if on mobile */
+@media only screen and (max-width: 600px) {
+    nav ul li {
+       display: block;
+	}
+	article {
+		display: block;
+	}
 }
