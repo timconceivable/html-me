@@ -1,7 +1,6 @@
 @font-face {
 	font-family: "Starcatcher";
-	src: url(https://dl.dafont.com/dl/?f=starcatcher); 
-	format("truetype");
+	src: url(starcatcher.ttf) format('truetype');
 }
 
 body {
