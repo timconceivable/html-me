@@ -146,6 +146,10 @@ section {
 	overflow: hidden;
 }
 
+#footerid {
+	background-color: rgb(243, 138, 0);
+}
+
 .small {
 	max-width: 40%;
 }
